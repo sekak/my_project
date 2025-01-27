@@ -16,6 +16,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+        <Head>
+          {/* Add your meta tag here */}
+          <meta name="surfe.pro" content="3a09554dcaf833be907a9f145fd731c9" />
+        </Head>
       <body className={inter.className}>{children}</body>
     </html>
   );
