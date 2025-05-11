@@ -6,6 +6,8 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import emailjs from '@emailjs/browser';
+
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -16,8 +18,20 @@ export default function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log(formData);
+    
+    emailjs.sendForm(
+      process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID as string,
+      process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID as string,
+      e.currentTarget as HTMLFormElement,
+      process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY as string,
+    ).then(
+      (result) => {
+        console.log('Message sent:', result.text);
+      },
+      (error) => {
+        console.error('Send error:', error.text);
+      }
+    );
   };
 
   return (
@@ -43,6 +57,7 @@ export default function Contact() {
                 </label>
                 <Input
                   id="name"
+                  name="name"
                   value={formData.name}
                   onChange={(e) =>
                     setFormData({ ...formData, name: e.target.value })
@@ -56,6 +71,7 @@ export default function Contact() {
                   Email
                 </label>
                 <Input
+                  name="email"
                   id="email"
                   type="email"
                   value={formData.email}
@@ -72,6 +88,7 @@ export default function Contact() {
                 </label>
                 <Textarea
                   id="message"
+                  name="message"
                   value={formData.message}
                   onChange={(e) =>
                     setFormData({ ...formData, message: e.target.value })

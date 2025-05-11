@@ -1,8 +1,10 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Menu, X, Code2 } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "./ui/button";
+import { FaPaintBrush } from "react-icons/fa";
+
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -23,8 +25,8 @@ const Navigation = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center space-x-2">
-            <Code2 className="h-6 w-6" />
-            <span className="font-bold text-lg">DevPortfolio</span>
+            <FaPaintBrush className="h-6 w-6" />
+            <span className="font-bold text-lg">Soukaina</span>
           </div>
 
           {/* Desktop Navigation */}

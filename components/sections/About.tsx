@@ -21,11 +21,7 @@ export default function About() {
             <CardContent className="p-6 space-y-4">
               <h3 className="text-xl font-semibold">My Journey</h3>
               <p className="text-muted-foreground">
-                With over 5 years of experience in web development, I've worked on
-                various projects ranging from small business websites to large-scale
-                enterprise applications. My passion lies in creating clean,
-                efficient, and user-friendly solutions that solve real-world
-                problems.
+                With experience in UI/UX design, I've worked on creating intuitive and visually appealing interfaces that enhance user experience. I'm passionate about designing user-friendly, accessible, and engaging digital products that make interactions seamless.
               </p>
             </CardContent>
           </Card>
@@ -34,11 +30,11 @@ export default function About() {
             <CardContent className="p-6 space-y-4">
               <h3 className="text-xl font-semibold">What I Do</h3>
               <ul className="space-y-2 text-muted-foreground">
-                <li>✓ Full-stack web development</li>
-                <li>✓ Responsive and mobile-first design</li>
-                <li>✓ API development and integration</li>
-                <li>✓ Performance optimization</li>
-                <li>✓ Technical consultation</li>
+                <li>✓ User-centered UI/UX design</li>
+                <li>✓ Wireframing & prototyping</li>
+                <li>✓ Interactive and accessible interfaces</li>
+                <li>✓ Design systems & style guides</li>
+                <li>✓ Usability testing & research</li>
               </ul>
             </CardContent>
           </Card>

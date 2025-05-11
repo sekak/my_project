@@ -15,14 +15,13 @@ export default function Hero() {
           className="space-y-4"
         >
           <h1 className="text-4xl md:text-6xl font-bold">
-            Hi, I'm <span className="text-primary">John Doe</span>
+            Hi, I'm <span className="text-primary">Soukaina Sekak</span>
           </h1>
           <h2 className="text-2xl md:text-4xl text-muted-foreground">
-            Full Stack Developer
+            UI UX Designer
           </h2>
           <p className="text-lg md:text-xl max-w-2xl text-muted-foreground">
-            I build exceptional and accessible digital experiences for the web.
-            Focused on creating intuitive and performant applications.
+            I design exceptional and accessible digital experiences with a focus on creating intuitive and visually engaging interfaces that enhance usability and performance.
           </p>
         </motion.div>
 
@@ -36,7 +35,12 @@ export default function Hero() {
             View Projects <ArrowRight className="h-4 w-4" />
           </Button>
           <Button size="lg" variant="outline">
+          <a
+            href="/SoukainaSekakCV.pdf"
+            download
+            >
             Download Resume
+            </a>
           </Button>
         </motion.div>
 

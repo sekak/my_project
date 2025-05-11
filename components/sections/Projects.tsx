@@ -2,31 +2,30 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Github } from "lucide-react";
 import { motion } from "framer-motion";
+import Image from "next/image";
+import Link from "next/link";
 
 const projects = [
   {
-    title: "E-commerce Platform",
-    description: "A full-stack e-commerce solution with real-time inventory management.",
-    image: "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&q=80",
-    technologies: ["Next.js", "TypeScript", "Prisma", "PostgreSQL"],
-    liveUrl: "#",
-    githubUrl: "#",
+    title: "Cookie Ordering App UI Design",
+    description: "A sleek, dark-themed mobile app interface designed for ordering premium cookies. The design features two screens: a homepage showcasing various cookie options with prices and offers, and a detailed product page emphasizing the selected cookie with an elegant, high-quality image. The interface incorporates minimalist typography, clean layout, and interactive buttons for selecting quantity and adding items to the order, providing a smooth user experience.",
+    image: './img0.png',
+    technologies: ["Figma", "UI/UX Design", "Mobile App Design"],
+    Figma: "https://www.figma.com/design/10szDTmnNDLGaY4IeghhrJ/Untitled?t=SF8ffsEW6xT02r43-0",
   },
   {
-    title: "Task Management App",
-    description: "A collaborative task management tool with real-time updates.",
-    image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800&q=80",
-    technologies: ["React", "Node.js", "Socket.io", "MongoDB"],
-    liveUrl: "#",
-    githubUrl: "#",
+    title: "VR E-Commerce Product UI Design",
+    description: "A sleek and modern mobile UI design for a VR headset product page. The layout features high-quality product images, engaging typography, and interactive elements, creating an immersive shopping experience for users.",
+    image: "./img1.png",
+    technologies: ["Figma", "UI/UX Design", "Mobile App Design"],
+    Figma: "https://www.figma.com/design/ccAgwJY23vxnb7S6Fdpfgd/Untitled?node-id=0-1&p=f&t=SF8ffsEW6xT02r43-0",
   },
   {
-    title: "Weather Dashboard",
-    description: "A weather forecasting application with interactive maps.",
-    image: "https://images.unsplash.com/photo-1592210454359-9043f067919b?w=800&q=80",
-    technologies: ["React", "OpenWeather API", "Mapbox", "TailwindCSS"],
-    liveUrl: "#",
-    githubUrl: "#",
+    title: "Burger Food App UI Design",
+    description: "A visually appealing mobile UI design for a food ordering app, focusing on delicious burger options. The interface combines high-quality food images, vibrant colors, and user-friendly navigation to enhance the ordering experience.",
+    image: "./img2.png",
+    technologies: ["Figma", "UI/UX Design", "Mobile App Design"],
+    Figma: "https://www.figma.com/design/0GVOdRDAk8C74LvSrcCskS/Untitled?node-id=0-1",
   },
 ];
 
@@ -56,10 +55,12 @@ export default function Projects() {
             >
               <Card className="overflow-hidden">
                 <div className="relative aspect-video">
-                  <img
+                  <Image
+                    width={100}
+                    height={80}
                     src={project.image}
                     alt={project.title}
-                    className="object-cover w-full h-full"
+                    className="object-cover w-full"
                   />
                 </div>
                 <CardHeader>
@@ -77,13 +78,12 @@ export default function Projects() {
                       </span>
                     ))}
                   </div>
-                  <div className="flex gap-4">
+                  <div className="flex">
+                    <Link href={project.Figma}  target="_blank" rel="noopener noreferrer">
                     <Button variant="outline" size="sm" className="gap-2">
-                      <ExternalLink className="h-4 w-4" /> Live Demo
+                      <ExternalLink className="h-4 w-4" /> View in Figma
                     </Button>
-                    <Button variant="outline" size="sm" className="gap-2">
-                      <Github className="h-4 w-4" /> Code
-                    </Button>
+                    </Link>
                   </div>
                 </CardContent>
               </Card>
